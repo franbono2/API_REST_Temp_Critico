@@ -79,13 +79,15 @@ DATABASES = {
     'default': {
         'ENGINE': 'djongo',
         'NAME': 'dockerCrit',
-        'ENFORCE_SCHEMA': 'False',
+        'ENFORCE_SCHEMA': 'True',
+        'PORT': '27017',
+        'USER': 'root',
+        'PASSWORD': 'mongoadmin',
         'CLIENT': {
-           'host': 'mongodb+srv://IWEBadmin:IWEBadmin@clusteriweb.sml2w.mongodb.net/iweb?retryWrites=true&w=majority',
+           'host': 'mongodb://root:mongoadmin@mongodb/',
         }
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
