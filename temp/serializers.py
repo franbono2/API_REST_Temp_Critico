@@ -6,4 +6,4 @@ from .models import Dato
 class DatoSerializer(serializers.ModelSerializer):
     class Meta:
         model = Dato
-        fields = ['id', 'valor']
+        fields = ['time', 'valor']

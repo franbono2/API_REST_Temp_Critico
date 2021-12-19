@@ -4,5 +4,5 @@ from django.db import models
 
 
 class Dato(models.Model):
-    id = models.BigIntegerField(primary_key=True)
+    time = models.BigIntegerField(primary_key=True)
     valor = models.IntegerField()
