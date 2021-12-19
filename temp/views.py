@@ -7,10 +7,17 @@ from .models import Dato
 from .serializers import DatoSerializer
 
 # Create your views here.
+
+
 class DatoList(generics.ListAPIView):
     queryset = Dato.objects.all()
     serializer_class = DatoSerializer
 
+
 class DatoCreate(generics.CreateAPIView):
     queryset = Dato.objects.all()
+    serializer_class = DatoSerializer
+
+class DatoList10(generics.ListAPIView):
+    queryset = Dato.objects.all()[:10]
     serializer_class = DatoSerializer
