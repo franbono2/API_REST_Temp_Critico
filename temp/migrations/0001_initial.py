@@ -14,7 +14,7 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Dato',
             fields=[
-                ('id', models.BigIntegerField(primary_key=True, serialize=False)),
+                ('time', models.BigIntegerField(primary_key=True, serialize=False)),
                 ('valor', models.IntegerField()),
             ],
         ),
