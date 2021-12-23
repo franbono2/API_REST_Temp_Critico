@@ -21,11 +21,12 @@ class DatoCreate(generics.CreateAPIView):
     serializer_class = DatoSerializer
 
 class DatoList10(generics.ListAPIView):
-    queryset = Dato.objects.all()[:10]
+    datos = Dato.objects.all().order_by('-time')[:10]
+    queryset = reversed(datos)
     serializer_class = DatoSerializer
 
 def main_view(request):
-    qs = Dato.objects.all()[:10]
+    qs = Dato.objects.all().order_by('-time')[:10]
     x = [x.time for x in qs]
     y = [y.valor for y in qs]
     chart = get_plot(x, y)

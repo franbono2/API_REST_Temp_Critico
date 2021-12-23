@@ -14,7 +14,7 @@ def get_graph():
 
 def get_plot(x, y):
     plt.switch_backend('AGG')
-    plt.figure(figsize=(10,5))
+    plt.figure(figsize=(10,4.5))
     plt.title('Grafica temperatura')
     plt.plot(x, y)
     plt.xticks(rotation=45)
