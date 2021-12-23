@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="">
+        <title>Últimos datos de temperatura</title>
+    </head>
+    <body>
+        <div class="container mt-3">
+            {% if chart %}
+                <img src="data:image/png;base64, {{chart|safe}}"> 
+            {% endif %}
+        </div>
+    </body>
+</html>
