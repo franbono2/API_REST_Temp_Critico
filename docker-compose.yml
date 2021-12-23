@@ -19,11 +19,9 @@ services:
             - 27017:27017
 
     web:
-        image: app
+        image: franbono2/dsc_crit
         restart: always
         command: python manage.py runserver 0.0.0.0:8000
-        volumes:
-        - .:/dockerDSC
         ports:
         - 8000:8000
         links:
@@ -33,10 +31,8 @@ services:
             
     migration:
         build: .
-        image: app
+        image: franbono2/dsc_crit
         command: python manage.py migrate
-        volumes:
-            - .:/dockerDSC
         links:
             - mongodb
         depends_on:
@@ -44,10 +40,8 @@ services:
     
     make_migrations:
         build: .
-        image: app
+        image: franbono2/dsc_crit
         command: python manage.py makemigrations
-        volumes:
-            - .:/dockerDSC
         links:
             - mongodb
         depends_on:
