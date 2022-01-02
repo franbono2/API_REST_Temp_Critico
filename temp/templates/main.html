@@ -12,24 +12,4 @@
             {% endif %}
         </div>
     </body>
-    <script>
-        function GetGrafica(){
-        //Modificar url para contenedor mongodb 
-        fetch('http://127.0.0.1:8000/temp/grafica/',
-        {
-            method:'GET',
-            headers:{
-                'Content-Type': 'application/json'
-            }
-        }).then(response=>response.json())
-        .then(error=>console.log(error))
-        }
-        useEffect(()=>{
-            GetGrafica();
-        const interval = setInterval(() => {
-            GetGrafica();
-          }, 10000);
-          return () => clearInterval(interval);
-    }, [])
-    </script>
 </html>
