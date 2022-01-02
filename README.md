@@ -22,6 +22,6 @@ docker container inspect <CONTAINER ID> | grep -i IPAddress
 Nos mostrará la IP del contenedor con la id seleccionada.
 Con la IP podremos acceder desde el navegador poniendo lo siguiente en la URL:
   
-http://<IPAddress>:8000/temp/
+http://IPAddress:8000/temp/
   
 Esto nos mostrará el listado de todas las temperaturas en la template por defecto del django rest framework.
